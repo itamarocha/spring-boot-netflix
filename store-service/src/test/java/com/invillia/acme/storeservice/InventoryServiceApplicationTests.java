@@ -1,4 +1,4 @@
-package com.invillia.acme.inventoryservice;
+package com.invillia.acme.storeservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

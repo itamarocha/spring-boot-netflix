@@ -1,7 +1,7 @@
-DELETE FROM inventory;
+DELETE FROM store;
 
-insert into inventory(id, product_code, quantity) VALUES
-(1, 'P001', 250),
-(2, 'P002', 132),
-(3, 'P003', 0)
+insert into store(id, name, address) VALUES
+(1, 'Loja 1', 'Rua 1'),
+(2, 'Loja 2', 'Rua 2'),
+(3, 'Loja 3', 'Rua 3')
 ;
