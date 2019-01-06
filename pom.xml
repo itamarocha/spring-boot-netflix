@@ -6,16 +6,15 @@
 	<groupId>com.invillia.acme</groupId>
 	<artifactId>invillia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
+	<packaging>pom</packaging>
 	<name>invillia</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Project in Spring Boot Microservices</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.0.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -23,28 +22,17 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
+	<modules>
+		<module>config-server</module>
+		<module>oauth2-server</module>
+		<module>service-registry</module>
+		<module>hystrix-dashboard</module>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
+		<module>store-service</module>
+		<module>payment-service</module>
+		<module>order-service</module>
+		<module>store-ui</module>
+		<module>zipkin-server</module>
+	</modules>
 
 </project>
