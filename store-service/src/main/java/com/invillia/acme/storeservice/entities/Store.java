@@ -16,7 +16,7 @@ import lombok.Data;
 public class Store {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @ApiModelProperty(notes = "The database generated product ID")
+    @ApiModelProperty(notes = "The database generated store ID")
     private Long id;
     @ApiModelProperty(notes = "Name of store")
     @Column(name = "name", nullable = false)

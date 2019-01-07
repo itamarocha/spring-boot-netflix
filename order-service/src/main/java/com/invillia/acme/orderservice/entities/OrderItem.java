@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
+import io.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 
 
@@ -17,13 +20,22 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class OrderItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @ApiModelProperty(notes = "The database generated order ID")
     private Long id;
-    private Long productId;
+    @ApiModelProperty(notes = "Product code")
+    private String product;
+    @ApiModelProperty(notes = "Description")
+    private String description;
+    @ApiModelProperty(notes = "Product quantity")
     private int quantity;
-    private BigDecimal productPrice;
-
+    @ApiModelProperty(notes = "Product unit Price")
+    private BigDecimal unitPrice;
+    /**
+     * Get price total item
+     * @return
+     */
     public BigDecimal getPrice() {
-        return productPrice.multiply(new BigDecimal(quantity));
+        return unitPrice.multiply(new BigDecimal(quantity));
     }
 }

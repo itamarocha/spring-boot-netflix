@@ -3,8 +3,6 @@ package com.invillia.acme.storeservice.web.controllers;
 import java.util.List;
 import java.util.Optional;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Api(value = "Store", description = "Store ")
 public class StoreController {
+	/** Data repository storeRepository **/
     private final StoreRepository storeRepository;
 
     @Autowired
@@ -38,7 +37,7 @@ public class StoreController {
     @ApiOperation(value = "List all stores")
     @GetMapping
     @HystrixCommand
-    public List<Store> getInventory() {
+    public List<Store> get() {
         log.info("Finding all stores ");
         return storeRepository.findAll();
     }
