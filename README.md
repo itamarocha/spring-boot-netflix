@@ -1,20 +1,5 @@
 # Invillia recruitment challenge
 
-[![Build Status](https://travis-ci.org/shelsonjava/invillia.svg?branch=master)](https://travis-ci.org/shelsonjava/invillia)
-
-![Invillia Logo](https://invillia.com/public/assets/img/logo-invillia.svg)
-[Invillia](https://https://www.invillia.com/) - A transformação começa aqui.
-
-The ACME company is migrating their monolithic system to a microservice architecture and you’re responsible to build their MVP (minimum viable product)  .
-https://en.wikipedia.org/wiki/Minimum_viable_product
-
-Your challenge is:
-Build an application with those features described below, if you think the requirements aren’t detailed enough please leave a comment (portuguese or english) and proceed as best as you can.
-
-You can choose as many features you think it’s necessary for the MVP,  IT’S NOT necessary build all the features, we strongly recommend to focus on quality over quantity, you’ll be evaluated by the quality of your solution.
-
-If you think something is really necessary but you don’t have enough time to implement please at least explain how you would implement it.
-
 ## Tasks
 
 Your task is to develop one (or more, feel free) RESTful service(s) to:
